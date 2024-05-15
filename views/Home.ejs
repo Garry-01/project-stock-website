@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="img/logo.svg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xchange</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/output.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<nav>
+    <%- include('partials/navbar.ejs') %>
+</nav>
+<body class="bd">
+    <div style="margin-top: 40px ;">
+        <div class="d-flex justify-content-evenly" style="padding-top: 50px; padding-bottom: 50px;">
+            <div>
+                <div class="text-body-secondary fs-4" style="margin-top: 20px;">HELLO INVESTOR!</div>
+                <div class="fs-3 fw-bold">Your wealth creation<br> journey starts here!</div>
+                <div id = "clogin"><a href="/login"><button type="button"
+                        class="bg-blue-600 px-3 py-2 text-lg rounded-lg hover:bg-blue-700 text-white font-normal"
+                        href="/login" style="margin-top: 20px;">Login</button></a>
+            </div>
+            </div>
+
+            <div class="d-flex">
+                <!-- <div class="bluebox" style="margin: 10px;"></div> -->
+                <img src="img/home_box1.png" style="height: auto; max-width: 200px;">
+                <img src="img/home_box2.png" style="height: auto; max-width: 200px;">
+                <img src="img/home_box3.png" style="height: auto; max-width: 200px;">
+            </div>
+        </div>
+    </div>
+    <div style="background-color: aliceblue; padding-top: 50px; padding-bottom: 50px;">
+        <div class="container">
+            <h3 class="text-center">21 Million+ users trust us for their Investments</h3>
+            <p class="text-center">Leader & pioneer in low-cost & commission-free investing, we provide access to
+                investing for Indians and help them achieve their financial goals.</p>
+            <div class="d-flex justify-content-evenly" style="padding-top: 50px;">
+                <div class="box text-center">
+                    <img src="img/mutual_funds (1).png" alt="mutual_funds" height="125px" width="125px">
+                    <div class="fw-bold">Mutual Funds</div>
+                    <div>Grow wealth & invest for your future with direct plans.</div>
+                    <div><a href="#">View Details ></a></div>
+                </div>
+                <div class="box text-center">
+                    <img src="img/stock.png" alt="stock" height="125px" width="125px">
+                    <div class="fw-bold">Stock Market</div>
+                    <div>Directly invest in companies you love & follow.</div>
+                    <div><a href="#">View Details ></a></div>
+                </div>
+                <div class="box text-center">
+                    <img src="img/retirement.png" alt="retirement" height="125px" width="125px">
+                    <div class="fw-bold">NPS Retirement Funds</div>
+                    <div>Build a corpus & pension for your retirement.</div>
+                    <div><a href="#">View Details ></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="padding-top: 50px;">
+        <div class="text-center">
+            <div class="fs-2 fw-semibold">Why Xchange?</div>
+            <div class="fs-4">Simple. Transparent. Accessible.</div>
+            <div class="blockquote">Our investment offerings give you a wide access to products and services to invest,
+                manage money and achieve your financial goals.Start Investing</div>
+            <div><a href="/watchlist"><button type="button"
+                        class="bg-blue-600 px-3 py-2 text-xl rounded-lg hover:bg-blue-700 text-white font-normal ">Watchlist</button></a>
+            </div>
+        </div>
+        <div>
+            <img src="img/Untitled-removebg-preview.png" alt="photo" class="img-fluid mx-auto d-block"
+                style="height: auto; width: 800px;">
+        </div>
+        <div class="line"></div>
+    </div>
+</body>
+<footer>
+    <%- include('partials/footer.ejs') %>
+</footer>
+<script>
+    // Retrieve the access token from local storage
+var accessToken = localStorage.getItem('G16-AccessToken');
+
+// Check if the access token is available
+if (accessToken) {
+    // Find the element whose inner HTML you want to change
+    let element = document.getElementById("clogin");
+    element.innerHTML = "<a href='/watchlist'><button type='button' class='bg-blue-600 px-3 py-2 text-lg rounded-lg hover:bg-blue-700 text-white font-normal'href='/watchlist' style='margin-top: 20px;'>Watchlist</button></a>"
+} else {
+    // Handle the case where the access token is not available
+    console.log('Access token not found.');
+}
+</script>
+</html>

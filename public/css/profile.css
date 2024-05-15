@@ -1,0 +1,153 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar-links ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-right: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #007bff;
+}
+
+/* Profile Completion Box Styles */
+.Profile-Completer-Box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.Profile-Completer-Box h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.Profile-Completer-Box-Content-Form {
+    margin-top: 20px;
+}
+
+.Profile-Completer-Box-Content-Form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.Profile-Completer-Box-Content-Form input,
+.Profile-Completer-Box-Content-Form select{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* increase the width of textarea */
+.Profile-Completer-Box-Content-Form textarea {
+    height: 100px;
+    width: 1000px;
+}
+.Profile-Completer-Box-Content-Form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.Profile-Completer-Box-Content-Form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Profile-Completer-Box-Content-Form button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        margin-top: 10px;
+    }
+
+    .Profile-Completer-Box {
+        padding: 15px;
+    }
+
+    .Profile-Completer-Box h1 {
+        font-size: 24px;
+    }
+
+    .Profile-Completer-Box-Content-Form input,
+    .Profile-Completer-Box-Content-Form select {
+        width: calc(100% - 20px);
+    }
+
+    .Profile-Completer-Box-Content-Form button {
+        width: 100%;
+    }
+}
